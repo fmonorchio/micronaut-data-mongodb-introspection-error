@@ -1,0 +1,20 @@
+plugins {
+    id("io.micronaut.minimal.library") version "3.4.1"
+}
+
+dependencies {
+    api("io.micronaut:micronaut-http-client")
+    api("io.micronaut:micronaut-jackson-databind")
+    api("io.micronaut.data:micronaut-data-mongodb")
+    api("io.micronaut.groovy:micronaut-runtime-groovy")
+    api("jakarta.annotation:jakarta.annotation-api")
+    api("org.mongodb:mongodb-driver-sync")
+    api("io.micronaut:micronaut-validation")
+}
+
+micronaut {
+    processing {
+        incremental(true)
+        annotations("com.example.*")
+    }
+}

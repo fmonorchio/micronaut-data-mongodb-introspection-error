@@ -1,0 +1,10 @@
+micronaut:
+  application:
+    name: demo
+
+mongodb.uri: 'mongodb://admin:qwerty123@localhost:27017/s3xify'
+
+netty:
+  default:
+    allocator:
+      max-order: 3
