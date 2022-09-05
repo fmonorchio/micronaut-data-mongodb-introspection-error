@@ -1,4 +1,2 @@
-rootProject.name = "demo"
-
 include "core"
 include "app"

@@ -2,7 +2,7 @@ micronaut:
   application:
     name: demo
 
-mongodb.uri: 'mongodb://admin:qwerty123@localhost:27017/s3xify'
+mongodb.uri: 'mongodb://admin:qwerty123@localhost:27017/demo'
 
 netty:
   default:

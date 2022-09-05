@@ -1,0 +1,13 @@
+services:
+  mongodb:
+    image: 'bitnami/mongodb:6.0'
+    environment:
+      MONGODB_ADVERTISED_HOSTNAME: 'mongodb'
+      MONGODB_DATABASE: 'demo'
+      MONGODB_PASSWORD: 'qwerty123'
+      MONGODB_REPLICA_SET_KEY: 'replicaset1'
+      MONGODB_REPLICA_SET_MODE: 'primary'
+      MONGODB_ROOT_PASSWORD: 'qwerty123'
+      MONGODB_USERNAME: 'admin'
+    ports:
+      - '27017:27017'

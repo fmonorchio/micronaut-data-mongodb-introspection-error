@@ -3,7 +3,6 @@ plugins {
 }
 
 dependencies {
-    api("io.micronaut:micronaut-jackson-databind")
     api("io.micronaut.data:micronaut-data-mongodb")
     api("io.micronaut.groovy:micronaut-runtime-groovy")
     api("org.mongodb:mongodb-driver-sync")

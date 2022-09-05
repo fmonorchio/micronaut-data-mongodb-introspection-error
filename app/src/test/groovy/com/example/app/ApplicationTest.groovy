@@ -1,21 +1,21 @@
-package com.example.app.controller
+package com.example.app
 
 import com.example.app.persistence.AccountEntity
 import com.example.app.persistence.AccountEntityRepository
 import com.example.app.persistence.UserEntity
-import io.micronaut.http.annotation.Controller
-import io.micronaut.http.annotation.Post
+import io.micronaut.test.extensions.spock.annotation.MicronautTest
 import jakarta.inject.Inject
+import spock.lang.Specification
 
-@Controller('/api/accounts')
-class AccountController {
+@MicronautTest
+class ApplicationTest extends Specification {
 
     @Inject
     AccountEntityRepository accountEntityRepository
 
-    @Post
-    AccountEntity registerAccount() {
+    def 'Should create an account'() {
 
+        given:
         def account = new AccountEntity(
                 username: 'fmonorchio',
                 email: 'fmonorchio@gmail.com',
@@ -25,7 +25,12 @@ class AccountController {
                 )
         )
 
-        return accountEntityRepository.save(account)
+        when:
+        def savedAccount = accountEntityRepository.save(account)
+
+        then:
+        noExceptionThrown()
+        savedAccount.id
     }
 
 }
