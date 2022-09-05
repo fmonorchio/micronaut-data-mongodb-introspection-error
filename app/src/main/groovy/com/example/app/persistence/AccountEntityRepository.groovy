@@ -1,6 +1,6 @@
-package com.example
+package com.example.app.persistence
 
-import com.example.persistence.repository.MongoEntityRepository
+import com.example.core.persistence.repository.MongoEntityRepository
 import io.micronaut.data.mongodb.annotation.MongoRepository
 
 @MongoRepository

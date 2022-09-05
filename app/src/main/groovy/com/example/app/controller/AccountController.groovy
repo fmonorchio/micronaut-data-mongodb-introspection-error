@@ -1,5 +1,8 @@
-package com.example
+package com.example.app.controller
 
+import com.example.app.persistence.AccountEntity
+import com.example.app.persistence.AccountEntityRepository
+import com.example.app.persistence.UserEntity
 import io.micronaut.http.annotation.Controller
 import io.micronaut.http.annotation.Post
 import jakarta.inject.Inject
@@ -15,7 +18,11 @@ class AccountController {
 
         def account = new AccountEntity(
                 username: 'fmonorchio',
-                email: 'fmonorchio@gmail.com'
+                email: 'fmonorchio@gmail.com',
+                user: new UserEntity(
+                        firstname: 'frank',
+                        lastname: 'monorchio'
+                )
         )
 
         return accountEntityRepository.save(account)

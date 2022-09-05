@@ -1,6 +1,6 @@
-package com.example.persistence.repository
+package com.example.core.persistence.repository
 
-import com.example.persistence.entity.MongoEntity
+import com.example.core.persistence.entity.MongoEntity
 import io.micronaut.data.repository.CrudRepository
 import org.bson.types.ObjectId
 

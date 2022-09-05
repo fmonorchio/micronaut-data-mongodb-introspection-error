@@ -1,4 +1,4 @@
-package com.example.persistence.entity
+package com.example.core.persistence.entity
 
 import io.micronaut.data.annotation.GeneratedValue
 import io.micronaut.data.annotation.Id
